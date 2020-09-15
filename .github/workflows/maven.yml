@@ -41,5 +41,6 @@ jobs:
         password: ${{ secrets.GITLAB_PASSWORD }}
         
     - name: Build and push
-      run: docker build -t registry.gitlab.com/openaffect/docker-registry/backend .
-      run: docker push registry.gitlab.com/openaffect/docker-registry/backend
+      run: |
+        docker build -t registry.gitlab.com/openaffect/docker-registry/backend .
+        docker push registry.gitlab.com/openaffect/docker-registry/backend
