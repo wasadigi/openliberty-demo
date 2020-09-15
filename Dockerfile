@@ -1,4 +1,4 @@
-FROM open-liberty:19.0.0.9-microProfile3-java11
+FROM openliberty/open-liberty:full-java11-openj9-ubi
 COPY src/main/liberty/config/server.xml /config/
 ADD target/*.war /config/dropins/
 
